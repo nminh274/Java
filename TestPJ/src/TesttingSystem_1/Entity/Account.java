@@ -6,7 +6,8 @@ public class Account {
     public String fullName;
     public Department department;
     public Position position;
-    public Group groups;
+    public Group[] groups;
 
 
 }
+
