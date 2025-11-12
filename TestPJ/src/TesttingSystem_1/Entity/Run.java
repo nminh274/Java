@@ -12,6 +12,12 @@ public class Run {
         Group g1 = new Group();
         g1.id = 1;
         g1.gname = "gName1";
+        g1.creator = "creator1";
+        Group g2 = new Group();
+        g2.id = 1;
+        g2.gname = "gName2";
+        g2.creator = "creator2";
+        Group[] gr1 = new Group[]{g1,g2};
 
         Account a1 = new Account();
         a1.id = 1;
@@ -20,7 +26,7 @@ public class Run {
         a1.fullName = "fullname1";
         a1.position = p1;
         a1.department = d1;
-        a1.groups = g1;
+        a1.groups = gr1;
 
         System.out.println(a1.id);
         System.out.println(a1.email);
@@ -28,6 +34,8 @@ public class Run {
         System.out.println(a1.fullName);
         System.out.println(a1.position.name);
         System.out.println(a1.department.name);
-        System.out.println(a1.groups.gname);
+        for(int i = 0;i <= 1;i++) {
+            System.out.println(a1.groups[i].creator);
+        }
     }
 }
