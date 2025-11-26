@@ -15,6 +15,8 @@ public class Run {
             System.out.println("2. Display Teachers");
             System.out.println("3. Add Student");
             System.out.println("4. Display Students");
+            System.out.println("5. Delete Teachers");
+            System.out.println("6. Delete Students");
             choice = SC.nextInt();
             switch (choice) {
                 case 0 -> {
@@ -45,6 +47,30 @@ public class Run {
                     } else{
                         for (Student s : students) {
                             s.display();
+                        }
+                    }
+                }
+                case 5 -> {
+                    System.out.println("Choose ID to delete");
+                    int choice2 = SC.nextInt();
+                    for(int i = 0; i < teachers.size(); i++){
+                        if(teachers.get(i).getId() == choice2){
+                            teachers.remove(i);
+                            System.out.println("Teacher deleted successfully");
+                        } else {
+                            System.out.println("ID not found");
+                        }
+                    }
+                }
+                case 6 ->{
+                    System.out.println("Choose ID to delete");
+                    int choice2 = SC.nextInt();
+                    for(int i = 0;i < students.size();i++){
+                        if(students.get(i).getId() == choice2){
+                            students.remove(i);
+                            System.out.println("Student deleted successfully");
+                        } else {
+                            System.out.println("ID not found");
                         }
                     }
                 }
