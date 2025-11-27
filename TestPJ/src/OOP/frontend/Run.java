@@ -17,6 +17,7 @@ public class Run {
             System.out.println("4. Display Students");
             System.out.println("5. Delete Teachers");
             System.out.println("6. Delete Students");
+            System.out.println("7. Display all");
             choice = SC.nextInt();
             switch (choice) {
                 case 0 -> {
@@ -72,6 +73,14 @@ public class Run {
                         } else {
                             System.out.println("ID not found");
                         }
+                    }
+                }
+                case 7 -> {
+                    for(Student s : students){
+                        s.display();
+                    }
+                    for(Teacher t : teachers){
+                        t.display();
                     }
                 }
             }
